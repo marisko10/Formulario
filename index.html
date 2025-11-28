@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h2 class="title">Contact Us</h2>
+        </header>
+
+      
+        <form id="contactForm"> 
+            
+           
+<div class="field1">
+    <div class="field">
+        <label for="name" class="labelname">First Name *</label>
+        <input type="text" id="name" name="name" required>
+        <p id="nameError" class="error"></p>
+    </div>
+
+    <div class="field">
+        <label for="lastname" class="labellastname">Last Name *</label>
+        <input type="text" id="lastname" name="lastname" required>
+        <p id="lastnameError" class="error"></p>
+    </div>
+</div>
+
+
+   
+    <div class="field">
+                <label for="email">Email Address *</label>
+                <input type="text" id="email" name="email" required>
+                <p id="emailError" class="error"></p>
+            </div>
+
+     
+            <div class="field">
+                <label>Query Type *</label>
+                
+                <div class ="radio-group">
+                    <div class="general">
+                    <input type="radio" name="QueryType" value="general" id="general">
+                    <label for="general">General Inquiry</label>
+                </div>
+                <div class="support">
+                    <input type="radio" name="QueryType" value="support" id="support">
+                    <label for="support">Support</label>
+                </div>
+            </div>
+
+                <p id="queryError" class="error"></p>
+            </div>
+
+           
+        <div class="field">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+                <p id="messageError" class="error"></p>
+            </div>
+
+          
+            <div class="field1">
+                <input type="checkbox" name="consent" id="consent" required>
+                <label for="consent">I consent to being contacted by the team *</label>
+                </div>
+                <div class="field">
+                <p id="consentError" class="error"></p>
+                </div>
+            
+
+            <button type="submit" class="buttonsubmit">Submit</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
