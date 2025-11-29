@@ -17,7 +17,7 @@ body {
 h2 {
     color: hsl(187, 24%, 22%);
     margin-top: 0px;
-    }
+}
 
 .field {
     display: flex;
@@ -69,6 +69,7 @@ button.buttonsubmit {
     font-size: 14px;
     width: 100%;
 }
+
 .field1 {
     display: flex;
     gap: 20px;
@@ -82,7 +83,6 @@ button.buttonsubmit {
 .radio-group{
 display: flex;
 gap: 50px;
-
 }
 .general, .support {
 margin-top: 7px;
@@ -99,6 +99,7 @@ border-radius: 5px;
 border: 1px solid hsl(186, 15%, 59%);
 padding: 5px;
 }
+
 #consentError {
 margin-bottom: 15px;
 }
