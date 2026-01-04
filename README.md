@@ -1,10 +1,9 @@
        Formulário Web Responsivo
 
-Projeto de formulário web desenvolvido com **HTML, CSS e JavaScript**, focado em boas práticas de front-end, validação de dados e experiência do utilizador.
+Projeto de formulário web desenvolvido com  HTML, CSS e JavaScript, focado em boas práticas de front-end, validação de dados e experiência do utilizador.
 
          Demonstração
- [Ver projeto online](#)  
-*(substitui pelo link do teu deploy – Vercel, Netlify, GitHub Pages, etc.)*
+formulario-iota-lilac.vercel.app
 
        Tecnologias Utilizadas
 - HTML5 (estrutura semântica)
