@@ -1,4 +1,3 @@
-
 const firstName = document.getElementById("name");
 const lastName = document.getElementById("lastname");
 const email = document.getElementById("email");
@@ -10,112 +9,94 @@ const btnSubmit = document.querySelector(".buttonsubmit");
 
 
 function validateFirstName() {
-    const error = document.getElementById("nameError");
+  const error = document.getElementById("nameError");
 
-    if (firstName.value.trim() === "") {
-        error.textContent = "This field is required.";
-        firstName.style.border = "1px solid red ";
-        return false;
-    }
+  if (firstName.value.trim() === "") {
+    error.textContent = "This field is required.";
+    firstName.style.border = "1px solid red";
+    return false;
+  }
 
-    error.textContent = "";
-     firstName.style.border = "";
-    return true;
+  error.textContent = "";
+  firstName.style.border = "";
+  return true;
 }
-firstName.addEventListener("blur", validateFirstName);
 
 function validateLastName() {
-    const error = document.getElementById("lastnameError");
+  const error = document.getElementById("lastnameError");
 
-    if (lastName.value.trim() === "") {
-        error.textContent = "This field is required.";
-        lastName.style.border = "1px solid red ";
-        return false;
-    }
+  if (lastName.value.trim() === "") {
+    error.textContent = "This field is required.";
+    lastName.style.border = "1px solid red";
+    return false;
+  }
 
-    error.textContent = "";
-     lastName.style.border = "";
-    return true;
+  error.textContent = "";
+  lastName.style.border = "";
+  return true;
 }
-
-
-lastName.addEventListener("blur", validateLastName);
-
-
 
 function validateEmail() {
-    const error = document.getElementById("emailError");
+  const error = document.getElementById("emailError");
+  const value = email.value.trim();
 
- if (!email.value.trim().includes("@") || !email.value.trim().includes(".")) {
+  if (!value.includes("@") || !value.includes(".")) {
     error.textContent = "Please enter a valid email address.";
-    email.style.border = "1px solid red ";
+    email.style.border = "1px solid red";
     return false;
+  }
+
+  error.textContent = "";
+  email.style.border = "";
+  return true;
 }
-
-
-else {
-    error.textContent = "";
-    email.style.border = "";
-    return true;
-}
-    
-}
-
-email.addEventListener("blur", validateEmail);
-
 
 function validateQueryType() {
-    const error = document.getElementById("queryError");
+  const error = document.getElementById("queryError");
 
-    if (!general.checked && !support.checked) {
-        error.textContent = "Please select a query type.";
+  if (!general.checked && !support.checked) {
+    error.textContent = "Please select a query type.";
+    return false;
+  }
 
-        return false;
-    }
-
-    error.textContent = "";
-    return true;
+  error.textContent = "";
+  return true;
 }
-
-general.addEventListener("change", validateQueryType);
-support.addEventListener("change", validateQueryType);
-
-
-
-
 
 function validateConsent() {
-    const error = document.getElementById("consentError");
+  const error = document.getElementById("consentError");
 
-    if (!consent.checked) {
-        error.textContent = "You must consent before submitting.";
-        return false;
-    }
+  if (!consent.checked) {
+    error.textContent = "You must consent before submitting.";
+    return false;
+  }
 
-    error.textContent = "";
-    return true;
+  error.textContent = "";
+  return true;
 }
 
+
+
+firstName.addEventListener("blur", validateFirstName);
+lastName.addEventListener("blur", validateLastName);
+email.addEventListener("blur", validateEmail);
+general.addEventListener("change", validateQueryType);
+support.addEventListener("change", validateQueryType);
 consent.addEventListener("change", validateConsent);
 
-
-
 btnSubmit.addEventListener("click", function (event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const isValid =
-        validateFirstName() &
-        validateLastName() &
-        validateEmail() &
-        validateQueryType() &
-        validateConsent();
+  const isValid =
+    validateFirstName() &&
+    validateLastName() &&
+    validateEmail() &&
+    validateQueryType() &&
+    validateConsent();
 
-    if (isValid) {
-        alert("Form submitted successfully!");
-        
-    }
+  if (isValid) {
+    alert("Form submitted successfully!");
+  }
 });
-
-    
 
 
